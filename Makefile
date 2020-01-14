@@ -11,7 +11,7 @@ run:
 	docker-compose up
 
 migrate:
-	$(COMMAND) 'cd critr; python3 manage.py makemigrations maps; python3 manage.py migrate maps'
+	$(COMMAND) 'cd critr; python3 manage.py makemigrations; python3 manage.py migrate'
 
 collectstatic:
 	docker-compose run --rm djangoapp critr/manage.py collectstatic --no-input
