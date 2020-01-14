@@ -63,3 +63,5 @@ You need to install [Docker][] and [Docker-Compose][].
 
 ## License
 Software licensed under the [ISC license](/LICENSE).
+# CRITr3
+Yet another CRITr repo. Contains all the CRITr code including server stuff (gunicorn app server and nginx web server).
