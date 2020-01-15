@@ -24,10 +24,10 @@
             	{{ field.label}}
 						</p>
             {{ field }}
-						<p  style="color: red" id="errorAJAX_{{forloop.counter}}"></p>
+						<p  style="color: red; margin-left: 5%; width:90%;" id="errorAJAX_{{forloop.counter}}"></p>
 						{% if field.errors %}
 							{% for error in field.errors %}
-								<p style="color: red">{{ error }}</p>
+								<p style="color: red;">{{ error }}</p>
 							{% endfor %}
 						{% endif %}
 						<!-- </div> -->
@@ -93,6 +93,11 @@
 	};
 	var CSRF_token = "{{csrf_token}}";
 	currentPage = 1;
+
+	currentPage = 5;
+	$("#form_1").hide();
+	$("#form_5").show();
+	$("#message").show();
 </script>
 
 <script type="text/javascript">

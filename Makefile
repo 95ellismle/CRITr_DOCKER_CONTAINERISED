@@ -14,7 +14,7 @@ migrate:
 	$(COMMAND) 'cd critr; python3 manage.py makemigrations; python3 manage.py migrate'
 
 collectstatic:
-	docker-compose run --rm djangoapp critr/manage.py collectstatic --no-input
+	$(COMMAND) 'cd critr; python3 manage.py collectstatic --no-input'
 
 createsuperuser:
 	$(COMMAND) "cd critr; python3 manage.py createsuperuser"

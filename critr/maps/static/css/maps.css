@@ -505,11 +505,13 @@ html {
 	color: #000;
 	position: relative;
 	padding: 5px;
-	margin-top: 5px;
+	margin-top: 0;
 }
 #message p {
-	padding: 10px 35px;
-	font-size: 18px;
+	padding: 0;
+	margin: 0;
+	margin-left: 40px;
+	font-size: 16px;
 }
 /* Add a green text color and a checkmark when the requirements are right */
 .valid {
@@ -517,7 +519,7 @@ html {
 }
 .valid:before {
 	position: relative;
-	left: -35px;
+	left: -20px;
 	content: "✔";
 }
 /* Add a red text color and an "x" when the requirements are wrong */
@@ -526,7 +528,7 @@ html {
 }
 .invalid:before {
 	position: relative;
-	left: -35px;
+	left: -20px;
 	content: "✖";
 }
 .tableDisplay {
