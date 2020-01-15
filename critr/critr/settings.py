@@ -22,7 +22,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 with open("./secret.key", 'r') as f:
     SECRET_KEY = f.read().strip()
-print(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -110,11 +109,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Where to go after logging in
+LOGIN_REDIRECT_URL = '/maps'
+LOGOUT_REDIRECT_URL = '/' 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 3600 # on hour in seconds
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-uk'
 
 TIME_ZONE = 'UTC'
 
