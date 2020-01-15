@@ -8,7 +8,7 @@ build:
 	docker-compose build
 
 run:
-	docker-compose up
+	./change_to_deploy.sh; docker-compose up
 
 migrate:
 	$(COMMAND) 'cd critr; python3 manage.py makemigrations; python3 manage.py migrate'
