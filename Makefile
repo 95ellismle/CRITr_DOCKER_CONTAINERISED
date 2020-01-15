@@ -2,7 +2,7 @@
 
 COMMAND = docker-compose run --rm djangoapp /bin/bash -c
 
-all: build test
+all: init build test
 
 build:
 	docker-compose build
@@ -21,6 +21,9 @@ createsuperuser:
 
 help:
 	$(COMMAND) "cd critr; python3 manage.py help"
+
+init:
+	dd if=/dev/urandom bs=60 count=1 | base64 > critr/secret.key
 
 check: checksafety checkstyle
 
