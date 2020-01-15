@@ -20,6 +20,7 @@ def user_login(request):
         password = request.POST['password']
 
         user = authenticate(username=username, password=password)
+        # print("\n\n\n\n\n\n", user, "\n\n\n\n\n\n")
         if user is not None:
             login(request, user)
             return render(request, "maps/map_index.html", {})
