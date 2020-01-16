@@ -7,7 +7,7 @@ function showCards() {
 function hideCards() {
     // document.getElementById("overlayBtn").style.display = "flex";
     // document.getElementById("overlayCards").style.display = "none";
-    document.getElementById("openActivities").style.display = "block";
+    document.getElementById("openActivitiesOverlay").style.display = "block";
     $('#startActivityBtn').hide()
 }
 
@@ -53,7 +53,7 @@ function setStartActDim(className, overlayDiv, choiceRowDiv, changeHeight=true) 
 
 function openStartActivity() {
   $('#overlayAdd').hide();
-  $('#openActivities').show();
+  $('#openActivitiesOverlay').show();
   document.getElementById("fullOverlay").style.display = "block";
   document.getElementById("startActivityOverlay").style.display = "block";
   setStartActDim("choiceAct", "startActivityOverlay", "activityChoices");
@@ -63,7 +63,7 @@ function openEndActivity() {
   document.getElementById("fullOverlay").removeAttribute("onclick");
 
   $('#overlayAdd').hide();
-  $('#openActivities').show();
+  $('#openActivitiesOverlay').show();
   document.getElementById("fullOverlay").style.display = "block";
   document.getElementById("endTrack").style.display = "block";
   setStartActDim("choiceSaveTrack", "endTrack", "saveChoiceRow", false);
@@ -71,12 +71,19 @@ function openEndActivity() {
 }
 
 function resetMapsPage() {
+  // Hide some overlays
   $('#startActivityOverlay').hide();
   $('#fullOverlay').hide();
   $('#overlayAdd').hide();
+  $('#overlayAccount').hide();
+  document.getElementById("overlayAccount").style.display = "none";
   $('#patrolOverlay').hide();
   $('#endTrack').hide();
-  $('#openActivities').show();
+
+  // Show some overlays
+  $('#openActivitiesOverlay').show();
+  $('#openAccountOverlay').show();
+  console.log("hide #overlayAccount");
 }
 
 // Will show remove the topBar for the user and go back to how the first screen was

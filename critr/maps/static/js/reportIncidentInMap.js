@@ -1,6 +1,6 @@
 function showNavBar() {
 	$("#overlayAdd").hide();
-	$("#openActivities").hide();
+	$("#openActivitiesOverlay").hide();
 	$('#fullOverlay').hide();
 
 	// Change the height of the maps
@@ -15,7 +15,7 @@ function showNavBar() {
 	topBar.style.height = "70px";
 }
 function hideNavBar() {
-	$("#openActivities").show();
+	$("#openActivitiesOverlay").show();
 
 	// Change the height of the maps
 	var mapView = document.getElementById("viewDiv");
